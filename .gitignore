@@ -1,0 +1,13 @@
+# exe
+*.exe
+
+*.o
+*.bin
+
+# bak
+*.bak
+bak
+
+# node 
+node_modules
+
