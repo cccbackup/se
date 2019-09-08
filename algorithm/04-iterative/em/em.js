@@ -1,6 +1,6 @@
 // 參考文獻：Numerical example to understand Expectation-Maximization -- http://ai.stanford.edu/~chuongdo/papers/em_tutorial.pdf
 // What is the expectation maximization algorithm? (PDF) -- http://stats.stackexchange.com/questions/72774/numerical-example-to-understand-expectation-maximization
-
+// https://ibug.doc.ic.ac.uk/media/uploads/documents/expectation_maximization-1.pdf
 var log=console.log;
 var R = require("j6");
 

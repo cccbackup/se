@@ -11,6 +11,10 @@
 
 * 程式 : [algorithm](algorithm)
 * 教材 : [演算法 -- 使用 JavaScript 實作](https://gitlab.com/ccckmit/course/wikis/%E9%99%B3%E9%8D%BE%E8%AA%A0/%E6%9B%B8%E7%B1%8D/%E6%BC%94%E7%AE%97%E6%B3%95)
+* 參考
+    * https://github.com/billryan/algorithm-exercise/tree/master/zh-tw
+    * http://jeffe.cs.illinois.edu/teaching/algorithms/
+    * http://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf
 
 ## 資料結構
 

@@ -1,3 +1,8 @@
+* https://www.kaggle.com/charel/learn-by-example-expectation-maximization
+* https://stats.stackexchange.com/questions/72774/numerical-example-to-understand-expectation-maximization
+   * https://www.cse.huji.ac.il/~yweiss/emTutorial.pdf
+* https://courses.cs.washington.edu/courses/cse312/11wi/slides/12em.pdf
+
 ## EM 演算法的一個範例
 
 看過 EM 演算法的數學介紹之後，相信大家應該和我一樣，都是一頭霧水的。誰知道那些數學要怎麼寫成程式呢？

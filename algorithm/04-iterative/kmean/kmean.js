@@ -1,4 +1,5 @@
 // ref : https://dotblogs.com.tw/dragon229/2013/02/04/89919
+var j6 = require("j6");
 module.exports = KMean = {}
 
 KMean.loadData = function (data) {
