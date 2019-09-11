@@ -25,7 +25,7 @@
     "graph-theory-ford-fulkerson": "^1.0.0",
     "j6": "^1.0.2",
     "koa": "^2.5.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "supertest": "^3.3.0",
     "yasmij": "^0.2.6"
   }

@@ -1,0 +1,22 @@
+{
+  "name": "ccclodash",
+  "version": "0.0.1",
+  "description": "just like lodash, a test version",
+  "main": "ccclodash.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "nyc": "^14.1.1"
+  }
+}
