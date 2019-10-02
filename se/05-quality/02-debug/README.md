@@ -10,8 +10,8 @@
 * https://www.facebook.com/ccckmit/posts/10156495068846893
 * https://www.reddit.com/r/javascript/comments/2arcwr/should_we_be_validating_function_arguments/
 * https://www.joyent.com/node-js/production/design/errors
-  * 這篇認為我們應該嚴格檢查並立即報錯 (丟出例外, callback error 或用 EventEmitter emit error)
-  * 只要和《API文件》中的規格不一樣，就立刻報錯！
+    * 這篇認為我們應該嚴格檢查並立即報錯 (丟出例外, callback error 或用 EventEmitter emit error)
+    * 只要和《API文件》中的規格不一樣，就立刻報錯！
 
 所以作者建議這樣寫
 
@@ -63,3 +63,20 @@ function connect(ip4addr, tcpPort, timeout, callback) {
   /* do work */
 }
 ```
+
+但是我看到的大部分 node.js 程式碼，通常不會使用這種預防錯誤的 assert 。
+
+例如你可以看到 lodash 的 chunk 並沒有處理 array 參數不是陣列的狀況
+
+* https://github.com/lodash/lodash/blob/master/chunk.js
+
+我想是因為若參數不是陣列，最後結果還是會錯誤，在測試時自然無法通過！
+
+(但用 assert 可以提早讓這個錯誤被報出來！可是每個函數都要加實在太麻煩。)
+
+如果對這類防護的要求很高，或許應該考慮改用 TypeScript
+
+* http://www.typescriptlang.org/
+    * https://en.wikipedia.org/wiki/TypeScript
+
+

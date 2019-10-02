@@ -17,6 +17,7 @@
 
 * https://en.wikipedia.org/wiki/Butterfly_effect
 * https://en.wikipedia.org/wiki/Lorenz_system
+    * [維基百科: 勞侖次吸子](https://zh.wikipedia.org/wiki/%E6%B4%9B%E4%BC%A6%E8%8C%A8%E5%90%B8%E5%BC%95%E5%AD%90)
 
 ```
 $ node butterfly

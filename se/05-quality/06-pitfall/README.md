@@ -115,7 +115,7 @@ i!=1
 ## C
 
 * [ptt C 語言新手十誡](http://dangerlover9403.pixnet.net/blog/post/193048854-%5B%E5%88%86%E4%BA%AB%5D-ptt-c-%E8%AA%9E%E8%A8%80%E6%96%B0%E6%89%8B%E5%8D%81%E8%AA%A1) (讚！)
-  * https://www.ptt.cc/bbs/C_and_CPP/M.1268491365.A.EF7.html
+    * https://www.ptt.cc/bbs/C_and_CPP/M.1268491365.A.EF7.html
 * http://www.literateprogramming.com/ctraps.pdf
 
 
@@ -130,6 +130,7 @@ i!=1
 * http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
 
 ## 參考
+
 * https://eloquentjavascript.net/08_error.html
 * [What the f*ck JavaScript?](https://github.com/denysdovhan/wtfjs/blob/master/README-zh-cn.md)
 * [10 COMMON JAVASCRIPT BUGS AND HOW TO AVOID THEM](https://www.dummies.com/web-design-development/javascript/10-common-javascript-bugs-and-how-to-avoid-them/)

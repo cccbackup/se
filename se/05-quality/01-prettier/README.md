@@ -3,11 +3,14 @@
 ## 隨堂練習 -- Prettier 自動排版
 
 1. 請安裝 Prettier formatter for Visual Studio Code 然後按下 (CMD + Shift + P 或 Shift-Alt-F) 來排版。
+    * https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 2. 請使用 prettier chunk.js 來排版
+    * https://prettier.io/docs/en/install.html
 3. 請使用 prettier *.js 來排版
 4. 請使用 prettier --write chunk.js 來排版
 5. 請為你的專案加上使用 prettier 自動排版
 6. 請安裝 husky 並設定好 package.json，讓 husky 自動在你 commit 的時候進行排版。
+    * [【工具推荐】使用 husky 避免糟糕的 git commit](https://zhuanlan.zhihu.com/p/35913229)
 
 參考: https://github.com/se107a/ccclodash 
 
