@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer')
 var browser, page1, page2
 
 const opts = {
-  headless: false,
+  // headless: false,
   slowMo: 10,
   timeout: 10000
 }
