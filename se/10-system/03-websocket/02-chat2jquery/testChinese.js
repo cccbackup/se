@@ -1,7 +1,7 @@
 const ok = require('assert').ok
 const app = require('./app')
 const puppeteer = require('puppeteer')
-var browser, page
+var browser, page1, page2
 
 const opts = {
   headless: false,
@@ -9,10 +9,11 @@ const opts = {
   timeout: 10000
 }
 
-describe('AJAX 型網誌系統', function() {
+describe('WebSocket Chat 測試', function() {
   before (async function () {
     browser = await puppeteer.launch(opts)
-    page = await browser.newPage()
+    page1 = await browser.newPage()
+    page2 = await browser.newPage()
   })
   after(function() {
     browser.close()
@@ -21,9 +22,9 @@ describe('AJAX 型網誌系統', function() {
 
   describe('使用 Puppeteer 測試貼文功能', function() {
     it('發出 GET / 應該會看到目前沒有任何貼文', async function() {
-      await page.goto('http://localhost:3000', {waitUntil: 'networkidle0'}) // 'domcontentloaded'
+      await page.goto('http://localhost:3000', {waitUntil: 'domcontentloaded'})
+      await page.focus('#')
       let html = await page.content()
-      // console.log('html=', html)
       ok(html.indexOf('<p>You have <strong>0</strong> posts!</p>') >= 0)
     })
     it('按下 #createPost 按鈕，應該會進入 New Post 畫面', async function() {
@@ -38,11 +39,11 @@ describe('AJAX 型網誌系統', function() {
       await page.keyboard.type('貼文內容 1')
       await page.click('#savePost')
     })
-    it('回到貼文列表後，應該會看到一則貼文', async function() {
+    it('should see <p>You have <strong>1</strong> posts!</p>', async function() {
       let html = await page.content()
       ok(html.indexOf('<p>You have <strong>1</strong> posts!</p>') >= 0)
     })
-    it('按下第一則貼文，應該會看到剛剛的貼文內容', async function() {
+    it('should see <p>You have <strong>1</strong> posts!</p>', async function() {
       await page.click('#show0')
       let html = await page.content()
       ok(html.indexOf('<h1>貼文標題 1</h1>') >= 0) 

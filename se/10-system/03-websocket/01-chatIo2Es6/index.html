@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 50%; margin-right: .5%; }
+      form button, input[type=submit] { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      #messages { margin-bottom: 40px }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="user" type="text" placeholder="user" style="width:100px"/>
+      <input id="msg" placeholder="message" autocomplete="off" />
+      <button id="send">Send</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script>
+      var socket = io('http://localhost:3000')
+      var form = document.querySelector('form')
+      var user = document.querySelector('#user')
+      var msg  = document.querySelector('#msg')
+      var messages  = document.querySelector('#messages')
+      var domParser = new DOMParser()
+
+      // 參考 -- https://davidwalsh.name/convert-html-stings-dom-nodes
+      function html2node(html) {
+        let doc = domParser.parseFromString(html, 'text/html')
+        return doc.body.firstChild
+      }
+
+      form.onsubmit = function() {
+        let umsg = user.value + ':' + msg.value
+        socket.emit('chat message', umsg)
+        console.log('umsg=', umsg)
+        msg.value = ''
+        return false
+      }
+
+      socket.on('chat message', function(msg){
+        messages.appendChild(html2node('<li>'+msg+'</li>'))
+        window.scrollTo(0, document.body.scrollHeight)
+      })
+    </script>
+  </body>
+</html>
