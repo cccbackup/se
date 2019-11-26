@@ -1,4 +1,4 @@
-require('should');
+const expect = require('chai').expect
 const app = require('./app');
 const server = app.listen();
 const request = require('supertest').agent(server);
@@ -14,7 +14,7 @@ describe('Blog', function() {
       .get('/')
       .expect(200, function(err, res) {
         if (err) return done(err);
-        res.should.be.html;
+        exptect(res).to.contain.should.be.html;
         res.text.should.include('<title>Posts</title>');
         done();
       });
