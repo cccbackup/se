@@ -2,7 +2,7 @@ var C = []
 
 function c(n, k) {
   if (k < 0 || k > n) return 0
-  if (k > n-k) k = n - k
+  // if (k > n-k) k = n - k
   if (C[n] == null) C[n] = []
   if (C[n][k] != null) return C[n][k]
   if (k==0 || n <= 1)

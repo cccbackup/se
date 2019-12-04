@@ -1,5 +1,6 @@
-var seed = 371
 const SEED_MAX = 9999997
+var d = new Date();
+var seed = d.getTime()%SEED_MAX; //371
 
 function random() {
     seed = (seed+37 ) % SEED_MAX

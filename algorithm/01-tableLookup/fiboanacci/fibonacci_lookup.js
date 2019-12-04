@@ -8,7 +8,7 @@ function fibonacci (n) {
 }
 
 var startTime = Date.now()
-console.log('fibonacci(43)=', fibonacci(43))
+console.log('fibonacci(60)=', fibonacci(60))
 var endTime = Date.now()
 var milliSeconds = endTime - startTime
 console.log('time:%dms', milliSeconds)

@@ -55,6 +55,12 @@ function align(b, a, m) {
   console.log('ax=', ax)
 }
 
+function dump(m) {
+  for (let row of m) {
+    console.log('%j', row)
+  }
+}
+
 var a, b
 /*
 a = "010100001"
@@ -69,5 +75,6 @@ b   = "ATGATCCG"
 // b   = "TCCGAA"
 let e = editDistance(b, a)
 console.log("dist(%s,%s) = %s", b, a, e.d)
-console.log('======m=========\n', e.m)
+console.log('======m=========\n')
+dump(e.m)
 align(b, a, e.m)

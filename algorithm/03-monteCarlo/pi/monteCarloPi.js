@@ -8,4 +8,4 @@ function monteCarloPi(n) {
   return 4*(hits/n)
 }
 
-console.log('MonteCarloPi(100000)=', monteCarloPi(100000))
+console.log('MonteCarloPi(1000000)=', monteCarloPi(1000000))
