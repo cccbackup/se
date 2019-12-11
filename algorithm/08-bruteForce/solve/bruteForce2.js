@@ -1,5 +1,5 @@
 function f(x) {
-  return sin(x*x+2*x)/x*x*x;
+  return Math.sin(x*x+2*x)/x*x*x;
 }
 
 for (var x=-100; x<=100; x+=0.001) {
