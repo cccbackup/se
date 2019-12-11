@@ -6,6 +6,8 @@ let record = {
   data: 'john => mary $2.7',
 }
 
-const digest = sha256(JSON.stringify(record, null, 2))
+let json = JSON.stringify(record, null, 2)
+console.log('json=', json)
+const digest = sha256(json)
 
 console.log('digest=', base64.stringify(digest))
