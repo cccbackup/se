@@ -12,7 +12,7 @@ function hash (text) {
 function mining(record) {
   // for (var nonce=0; nonce<1000000000000; nonce++) {
   while (true) {
-    let nonce = Math.floor(Math.random()*99999999)
+    let nonce = Math.floor(Math.random()*100000000)
     record.nonce = nonce
     let h = hash(JSON.stringify(record))
     if (h.startsWith('00000')) return { nonce: nonce, hash: h }
