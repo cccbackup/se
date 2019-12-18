@@ -75,7 +75,10 @@ R.savePost = async function () {
   let body = document.querySelector('#body').value
   let r = await window.fetch('/post', {
     body: JSON.stringify({title: title, body: body}),
-    method: 'POST'
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
   })
   window.location.hash = '#list'
   return r
