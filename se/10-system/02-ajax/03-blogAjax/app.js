@@ -55,7 +55,7 @@ async function show (ctx) {
  */
 
 async function create (ctx) {
-  var post = JSON.parse(ctx.request.body)
+  var post = ctx.request.body
   const id = posts.push(post) - 1
   console.log('create:id=>', id)
   console.log('create:get=>', post)

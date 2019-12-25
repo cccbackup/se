@@ -40,8 +40,8 @@ var steps = function(from, to, step = 1) {
 var x = steps(0, 10*Math.PI, Math.PI/8)
 var f = x.map(Complex.expi)
 
-console.log('f=%s', f)
+console.log('f=%s\n\n', f)
 F = DFT(f)
-console.log('F=DFT(f)=%s', F)
+console.log('F=DFT(f)=%s\n\n', F)
 f2 = iDFT(F)
-console.log('f2=iDFT(F)=%s', f2)
+console.log('f2=iDFT(F)=%s\n\n', f2)
